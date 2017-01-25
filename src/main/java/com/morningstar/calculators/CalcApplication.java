@@ -23,7 +23,7 @@ public class CalcApplication implements CalcInterface{
 	
 	@Override
 	public Double divide(double input1, double input2) {
-		if (!Double.isNaN(input2)) {
+		if (Double.isNaN(input2)) {
 			double x = (input1 / input2);
 			return x;
 		} else {
@@ -61,11 +61,12 @@ public class CalcApplication implements CalcInterface{
 	public double[] qroot(double a, double b, double c) {
 		double[] roots = { 0.0, 0.0 };
 		double d = (b * b) - 4 * a * c;
-		if (d > 0) {
+		int temp=Integer.parseInt(Double.toString(d*100000))/100000;
+		if (temp > 0) {
 			roots[0] = (-b + Math.sqrt(d)) / (2 * a);
 			roots[1] = (-b - Math.sqrt(d)) / (2 * a);
 			return roots;
-		} else if (d == 0.0d) {
+		} else if (temp == 0) {
 			roots[0] = (-b + Math.sqrt(d)) / (2 * a);
 			roots[1] = (-b + Math.sqrt(d)) / (2 * a);
 			return roots;

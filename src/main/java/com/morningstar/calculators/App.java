@@ -10,23 +10,21 @@ public class App {
 	static Scanner sc;
 	static double input1, input2;
 	static CalcApplication calc;
-	static int a;
 	private App() {
 		input1 = 0.0;
 		input2 = 0.0;
-		sc = new Scanner(System.in);
-		calc = new CalcApplication();
 	}
 
 	public static void main(String[] args) {
 		System.out.println("\t Welcome \n Calculator Program Using Maven");
 		boolean flag = true;
+		int a;
+		sc = new Scanner(System.in);
+		calc = new CalcApplication();
 		while (flag) {
 			try {
-				System.out
-						.println("Choose Operation : \n 1.Addition \n 2.Subtraction \n 3.Multiplication \n 4.Division");
-				System.out.println(
-						" 5.Exponential \n 6.Nth root \n 7.Quadratic Equations Root \n 8.Log  \n 9.Mod  \n 10.Tan  \n 11.Exit \n\n\n");
+				System.out.println("Choose Operation : \n 1.Addition \n 2.Subtraction \n 3.Multiplication \n 4.Division");
+				System.out.println(" 5.Exponential \n 6.Nth root \n 7.Quadratic Equations Root \n 8.Log  \n 9.Mod  \n 10.Tan  \n 11.Exit \n\n\n");
 				a = sc.nextInt();
 				switch (a) {
 				case 1:
