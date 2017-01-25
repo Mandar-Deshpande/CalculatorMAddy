@@ -1,1 +1,2 @@
-# CalculatorMAddy
+# Calculator
+This is basic calculator Program
