@@ -23,7 +23,7 @@ public class CalcApplication implements CalcInterface{
 	
 	@Override
 	public Double divide(double input1, double input2) {
-		if (input2 != 0.0) {
+		if (input2 != 0.0d) {
 			double x = (input1 / input2);
 			return x;
 		} else {
@@ -46,7 +46,7 @@ public class CalcApplication implements CalcInterface{
 			System.err.println("Negative!");
 			return -1;
 		}
-		if (x == 0)
+		if (x == 0.0d)
 			return 0;
 		double x1 = x;
 		double x2 = x / input1;
@@ -65,7 +65,7 @@ public class CalcApplication implements CalcInterface{
 			roots[0] = (-b + Math.sqrt(d)) / (2 * a);
 			roots[1] = (-b - Math.sqrt(d)) / (2 * a);
 			return roots;
-		} else if (d == 0) {
+		} else if (d == 0.0d) {
 			roots[0] = (-b + Math.sqrt(d)) / (2 * a);
 			roots[1] = (-b + Math.sqrt(d)) / (2 * a);
 			return roots;
