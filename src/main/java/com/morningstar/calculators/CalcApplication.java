@@ -23,7 +23,7 @@ public class CalcApplication implements CalcInterface{
 	
 	@Override
 	public Double divide(double input1, double input2) {
-		if (input2 != 0.0d) {
+		if (!Double.isNaN(input2)) {
 			double x = (input1 / input2);
 			return x;
 		} else {
