@@ -10,7 +10,7 @@ public class App {
 	static Scanner sc;
 	static double input1, input2;
 	static CalcApplication calc;
-
+	static int a;
 	private App() {
 		input1 = 0.0;
 		input2 = 0.0;
@@ -20,7 +20,6 @@ public class App {
 
 	public static void main(String[] args) {
 		System.out.println("\t Welcome \n Calculator Program Using Maven");
-		int a = 0;
 		boolean flag = true;
 		while (flag) {
 			try {
@@ -72,15 +71,15 @@ public class App {
 				if (a != 8) {
 					System.out.println("\n Enter Y to Continue ");
 					String x = sc.next();
-					if(x.equalsIgnoreCase("y")) {
+					if("y".equalsIgnoreCase(x)) {
 						flag=false;
 					}
 					for (int clear = 0; clear < 1000; clear++) {
 						System.out.println("\b");
 					}
 				}
-			} catch (Exception e) {
-				System.err.println("Exception :" + e.getMessage());
+			} catch (Exception ex) {
+				System.err.println(ex);
 			}
 		}
 	}
