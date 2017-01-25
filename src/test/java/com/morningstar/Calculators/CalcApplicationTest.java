@@ -9,6 +9,8 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import org.junit.runner.JUnitCore;
 
+import com.morningstar.calculators.CalcApplication;
+
 /**
  * @author mdeshpa
  *
@@ -19,7 +21,7 @@ public class CalcApplicationTest {
 
 	/**
 	 * Test method for
-	 * {@link com.morningstar.Calculators.CalcApplication#add(double, double)}.
+	 * {@link com.morningstar.calculators.CalcApplication#add(double, double)}.
 	 */
 	@Test
 	public void testAdd() {
@@ -30,7 +32,7 @@ public class CalcApplicationTest {
 
 	/**
 	 * Test method for
-	 * {@link com.morningstar.Calculators.CalcApplication#add(double, double)}.
+	 * {@link com.morningstar.calculators.CalcApplication#add(double, double)}.
 	 */
 	@Test
 	public void test2Add() {
@@ -41,7 +43,7 @@ public class CalcApplicationTest {
 
 	/**
 	 * Test method for
-	 * {@link com.morningstar.Calculators.CalcApplication#subtract(double, double)}
+	 * {@link com.morningstar.calculators.CalcApplication#subtract(double, double)}
 	 * .
 	 */
 	@Test
@@ -53,7 +55,7 @@ public class CalcApplicationTest {
 
 	/**
 	 * Test method for
-	 * {@link com.morningstar.Calculators.CalcApplication#subtract(double, double)}
+	 * {@link com.morningstar.calculators.CalcApplication#subtract(double, double)}
 	 * .
 	 */
 	@Test
@@ -65,7 +67,7 @@ public class CalcApplicationTest {
 
 	/**
 	 * Test method for
-	 * {@link com.morningstar.Calculators.CalcApplication#multiply(double, double)}
+	 * {@link com.morningstar.calculators.CalcApplication#multiply(double, double)}
 	 * .
 	 */
 	@Test
@@ -77,7 +79,7 @@ public class CalcApplicationTest {
 
 	/**
 	 * Test method for
-	 * {@link com.morningstar.Calculators.CalcApplication#multiply(double, double)}
+	 * {@link com.morningstar.calculators.CalcApplication#multiply(double, double)}
 	 * .
 	 */
 	@Test
@@ -89,7 +91,7 @@ public class CalcApplicationTest {
 
 	/**
 	 * Test method for
-	 * {@link com.morningstar.Calculators.CalcApplication#divide(double, double)}
+	 * {@link com.morningstar.calculators.CalcApplication#divide(double, double)}
 	 * .
 	 */
 	@Test
@@ -101,7 +103,7 @@ public class CalcApplicationTest {
 
 	/**
 	 * Test method for
-	 * {@link com.morningstar.Calculators.CalcApplication#divide(double, double)}
+	 * {@link com.morningstar.calculators.CalcApplication#divide(double, double)}
 	 * .
 	 */
 	@Test
@@ -113,7 +115,7 @@ public class CalcApplicationTest {
 
 	/**
 	 * Test method for
-	 * {@link com.morningstar.Calculators.CalcApplication#expone(double)}.
+	 * {@link com.morningstar.calculators.CalcApplication#expone(double)}.
 	 */
 	@Test
 	public void testExpone() {
@@ -124,7 +126,7 @@ public class CalcApplicationTest {
 
 	/**
 	 * Test method for
-	 * {@link com.morningstar.Calculators.CalcApplication#nroot(double root, double Number)}
+	 * {@link com.morningstar.calculators.CalcApplication#nroot(double root, double Number)}
 	 * .
 	 */
 	@Test
@@ -136,7 +138,7 @@ public class CalcApplicationTest {
 
 	/**
 	 * Test method for
-	 * {@link com.morningstar.Calculators.CalcApplication#Qroot(double, double, double)}
+	 * {@link com.morningstar.calculators.CalcApplication#Qroot(double, double, double)}
 	 * .
 	 */
 	@Test
@@ -148,7 +150,7 @@ public class CalcApplicationTest {
 
 	/**
 	 * Test method for
-	 * {@link com.morningstar.Calculators.CalcApplication#Log(double)} .
+	 * {@link com.morningstar.calculators.CalcApplication#Log(double)} .
 	 */
 	@Test
 	public void testLogc() {
@@ -175,7 +177,7 @@ public class CalcApplicationTest {
 
 	/**
 	 * Test method for
-	 * {@link com.morningstar.Calculators.CalcApplication#Tan(double)} .
+	 * {@link com.morningstar.calculators.CalcApplication#Tan(double)} .
 	 */
 	@Test
 	public void testTan() {
@@ -186,7 +188,7 @@ public class CalcApplicationTest {
 
 	/**
 	 * Test method for
-	 * {@link com.morningstar.Calculators.CalcApplication#Mod(double)} .
+	 * {@link com.morningstar.calculators.CalcApplication#Mod(double)} .
 	 */
 	@Test
 	public void testMod() {
@@ -196,7 +198,7 @@ public class CalcApplicationTest {
 	}
 
 	public static void main(String[] args) throws Exception {
-		JUnitCore.main("com.morningstar.Calculators.CalcApplicationTest");
+		JUnitCore.main("com.morningstar.calculators.CalcApplicationTest");
 	}
 
 }

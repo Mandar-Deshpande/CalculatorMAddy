@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.morningstar.Calculators;
+package com.morningstar.calculators;
 
 /**
  * @author mdeshpa

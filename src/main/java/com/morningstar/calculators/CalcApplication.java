@@ -1,22 +1,27 @@
 /**
  * 
  */
-package com.morningstar.Calculators;
+package com.morningstar.calculators;
+
+import com.sun.xml.internal.bind.annotation.OverrideAnnotationOf;
 
 public class CalcApplication implements CalcInterface {
-
+	@Override
 	public Double add(double input1, double input2) {
 		return (input1 + input2);
 	}
-
+	
+	@Override
 	public Double subtract(double input1, double input2) {
 		return (input1 - input2);
 	}
-
+	
+	@Override
 	public Double multiply(double input1, double input2) {
 		return (input1 * input2);
 	}
-
+	
+	@Override
 	public Double divide(double input1, double input2) {
 		if (input2 != 0.0) {
 			double x = (input1 / input2);
@@ -26,10 +31,12 @@ public class CalcApplication implements CalcInterface {
 		}
 	}
 
+	@Override
 	public Double expone(double input1) {
 		return (Math.round(Math.exp(input1) * 100.0) / 100.0);
 	}
 
+	@Override
 	public Double nroot(double input1, double input2) {
 		return nthroot(input1, input2, .0001);
 	}
@@ -50,6 +57,7 @@ public class CalcApplication implements CalcInterface {
 		return Math.round(x2 * 1000.0) / 1000.0;
 	}
 
+	@Override
 	public double[] qroot(double a, double b, double c) {
 		double[] roots = { 0.0, 0.0 };
 		double d = (b * b) - 4 * a * c;
@@ -67,31 +75,37 @@ public class CalcApplication implements CalcInterface {
 		}
 	}
 
+	@Override
 	public double logc(double a) {
 		return Math.log(a);
 
 	}
 
+	@Override
 	public Double display_PI() {
 		return Math.PI;
 	}
 
+	@Override
 	public Double sin(double a) {
 
 		return Math.sin(Math.toRadians(a));
 
 	}
 
+	@Override
 	public Double cos(double a) {
 
 		return Math.cos(Math.toRadians(a));
 
 	}
 
+	@Override
 	public double mod(double input1, double input2) {
 		return (input1 % input2);
 	}
 
+	@Override
 	public double GeoTan(double input1) {
 		return Math.tan(input1);
 	}
