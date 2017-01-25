@@ -3,9 +3,9 @@
  */
 package com.morningstar.calculators;
 
-import com.sun.xml.internal.bind.annotation.OverrideAnnotationOf;
 
-public class CalcApplication implements CalcInterface {
+public class CalcApplication implements CalcInterface{
+	
 	@Override
 	public Double add(double input1, double input2) {
 		return (input1 + input2);
@@ -16,7 +16,7 @@ public class CalcApplication implements CalcInterface {
 		return (input1 - input2);
 	}
 	
-	@Override
+	@Override	
 	public Double multiply(double input1, double input2) {
 		return (input1 * input2);
 	}
