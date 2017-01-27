@@ -136,7 +136,9 @@ public class MockTests {
 	 */
 	@Test
 	public void testMod() {
-		fail("Not yet implemented");
+		CalcApplication ca=mock(CalcApplication.class);
+		when(ca.mod(15, 7)).thenReturn(1.0);
+		assertEquals(1.0,ca.mod(15,7 ),0.00001);
 	}
 
 	/**
@@ -144,7 +146,9 @@ public class MockTests {
 	 */
 	@Test
 	public void testGeoTan() {
-		fail("Not yet implemented");
+		CalcApplication ca=mock(CalcApplication.class);
+		when(ca.GeoTan(60)).thenReturn(0.3200403);
+		assertEquals(0.3200403,ca.GeoTan(60),0.00001);
 	}
 
 }
