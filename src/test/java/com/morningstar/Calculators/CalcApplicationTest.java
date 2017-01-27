@@ -182,7 +182,7 @@ public class CalcApplicationTest {
 	@Test
 	public void testTan() {
 		double ExpectedOut = 0.3200403;
-		double ActualOut = cl.GeoTan(60);
+		double ActualOut = cl.geoTan(60);
 		assertEquals(ExpectedOut, ActualOut, 0.0001);
 	}
 

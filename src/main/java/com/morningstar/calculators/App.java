@@ -167,6 +167,6 @@ public class App {
 		System.out.println("Tan of Number");
 		System.out.println("Enter degree in Radians :");
 		input1 = sc.nextDouble();
-		System.out.println("Tan(" + input1 + ") = " + calc.GeoTan(input1));
+		System.out.println("Tan(" + input1 + ") = " + calc.geoTan(input1));
 	}
 }

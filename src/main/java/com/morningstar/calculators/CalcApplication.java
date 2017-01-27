@@ -91,7 +91,7 @@ public class CalcApplication implements CalcInterface{
 	}
 
 	@Override
-	public Double display_PI() {
+	public Double displayPI() {
 		return Math.PI;
 	}
 
@@ -115,7 +115,7 @@ public class CalcApplication implements CalcInterface{
 	}
 
 	@Override
-	public double GeoTan(double input1) {
+	public double geoTan(double input1) {
 		return Math.tan(input1);
 	}
 

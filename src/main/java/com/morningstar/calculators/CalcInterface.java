@@ -27,9 +27,9 @@ public interface CalcInterface {
 
 	public double mod(double input1, double input2);
 
-	public double GeoTan(double input1);
+	public double geoTan(double input1);
 
-	public Double display_PI();
+	public Double displayPI();
 
 	public Double sin(double d);
 	
