@@ -28,12 +28,14 @@ public class CalcApplication implements CalcInterface{
 	
 	@Override
 	public Double divide(double input1, double input2) {
-		if (input2!=tempd) {
-			double x = (input1 / input2);
-			return x;
-		} else {
-			return Double.MIN_VALUE;
-		}
+			int temp=Double.compare(input2, 0.0);
+			if(temp!=0) {
+				double x = (input1 / input2);
+				return x;
+			}
+			else {
+				return Double.POSITIVE_INFINITY;
+			}
 	}
 
 	@Override
@@ -47,11 +49,12 @@ public class CalcApplication implements CalcInterface{
 	}
 
 	public double nthroot(double input1, double x, double p) {
-		if (x < 0) {
+		int flag=Double.compare(x, tempd);
+		if (flag < 0) {
 			System.err.println("Negative!");
 			return -1;
 		}
-		if (x == tempd)
+		if (flag==0)
 			return 0;
 		double x1 = x;
 		double x2 = x / input1;
@@ -66,11 +69,12 @@ public class CalcApplication implements CalcInterface{
 	public double[] qroot(double a, double b, double c) {
 		double[] roots = { 0.0, 0.0 };
 		double d = (b * b) - 4 * a * c;
-		if (d > 0) {
+		int flag=Double.compare(d, tempd);
+		if (flag > 0) {
 			roots[0] = (-b + Math.sqrt(d)) / (2 * a);
 			roots[1] = (-b - Math.sqrt(d)) / (2 * a);
 			return roots;
-		} else if (d == tempd) {
+		} else if (flag == 0) {
 			roots[0] = (-b + Math.sqrt(d)) / (2 * a);
 			roots[1] = (-b + Math.sqrt(d)) / (2 * a);
 			return roots;

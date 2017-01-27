@@ -69,11 +69,11 @@ public class App {
 				if (a != 8) {
 					System.out.println("\n Enter Y to Continue ");
 					String x = sc.next();
-					if("y".equalsIgnoreCase(x)) {
+					if(!"y".equalsIgnoreCase(x)) {
 						flag=false;
 					}
 					for (int clear = 0; clear < 1000; clear++) {
-						System.out.println("\b");
+						System.out.println("\n");
 					}
 				}
 			} catch (Exception ex) {

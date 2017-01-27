@@ -108,7 +108,7 @@ public class CalcApplicationTest {
 	 */
 	@Test
 	public void test2Divide() {
-		Double ExpectedOut = Double.MIN_VALUE;
+		Double ExpectedOut = Double.POSITIVE_INFINITY;
 		Double ActualOut = cl.divide(25, 0);
 		assertEquals(ExpectedOut, ActualOut);
 	}
