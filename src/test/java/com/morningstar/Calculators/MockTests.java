@@ -10,6 +10,7 @@ import static org.mockito.Mockito.when;
 import static org.mockito.Matchers.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import com.morningstar.calculators.CalcApplication;
@@ -38,7 +39,8 @@ public class MockTests {
 	when(ca.add(3, 4)).thenReturn(7.0);
 	assertEquals(7.0,ca.add(3, 4),0.000001);
 	}
-
+	
+	
 	/**
 	 * Test method for {@link com.morningstar.calculators.CalcApplication#subtract(double, double)}.
 	 */
