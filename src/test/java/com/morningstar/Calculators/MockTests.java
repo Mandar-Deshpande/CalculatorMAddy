@@ -4,13 +4,21 @@
 package com.morningstar.Calculators;
 
 import static org.junit.Assert.*;
-
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+import static org.mockito.Matchers.anyInt;
 import org.junit.Test;
+import org.junit.runner.JUnitCore;
+import org.junit.runner.RunWith;
+import org.mockito.runners.MockitoJUnitRunner;
+
+import com.morningstar.calculators.CalcApplication;
 
 /**
  * @author mdeshpa
  *
  */
+@RunWith(MockitoJUnitRunner.class)
 public class MockTests {
 
 	/**
@@ -18,7 +26,7 @@ public class MockTests {
 	 */
 	@Test
 	public void testCalcApplication() {
-		fail("Not yet implemented");
+		
 	}
 
 	/**
@@ -34,7 +42,11 @@ public class MockTests {
 	 */
 	@Test
 	public void testSubtract() {
-		fail("Not yet implemented");
+		CalcApplication cal=mock(CalcApplication.class);
+		when(cal.subtract(10, 5)).thenReturn(5.0);
+		Double A=cal.subtract(10, 5);
+		Double E=5.0;
+		assertEquals(A, E);
 	}
 
 	/**
@@ -42,7 +54,11 @@ public class MockTests {
 	 */
 	@Test
 	public void testMultiply() {
-		fail("Not yet implemented");
+		CalcApplication cal=mock(CalcApplication.class);
+		when(cal.multiply(10, 5)).thenReturn(55.0);
+		Double A=cal.multiply(10, 5);
+		Double E=55.0;
+		assertEquals(A, E);
 	}
 
 	/**
@@ -58,7 +74,11 @@ public class MockTests {
 	 */
 	@Test
 	public void testExpone() {
-		fail("Not yet implemented");
+		CalcApplication cal=mock(CalcApplication.class);
+		when(cal.expone(10)).thenReturn(55.0);
+		Double E=55.0;
+		Double A=cal.expone(10);
+		assertEquals(A, E);
 	}
 
 	/**
@@ -66,23 +86,24 @@ public class MockTests {
 	 */
 	@Test
 	public void testNroot() {
-		fail("Not yet implemented");
+		CalcApplication cal=mock(CalcApplication.class);
+		when(cal.nroot(10, 5)).thenReturn(90.0);
+		Double A=cal.nroot(10, 5);
+		Double E=90.0;
+		assertEquals(A, E);
 	}
 
 	/**
 	 * Test method for {@link com.morningstar.calculators.CalcApplication#nthroot(double, double, double)}.
 	 */
-	@Test
-	public void testNthroot() {
-		fail("Not yet implemented");
-	}
 
-	/**
-	 * Test method for {@link com.morningstar.calculators.CalcApplication#qroot(double, double, double)}.
-	 */
 	@Test
 	public void testQroot() {
-		fail("Not yet implemented");
+		CalcApplication cal=mock(CalcApplication.class);
+		double[] E= {50,50};
+		when(cal.qroot(25,10, 5)).thenReturn(E);
+		double[] A=cal.qroot(25,10, 5);
+		assertEquals(A, E);
 	}
 
 	/**
@@ -90,7 +111,11 @@ public class MockTests {
 	 */
 	@Test
 	public void testLogc() {
-		fail("Not yet implemented");
+		CalcApplication cal=mock(CalcApplication.class);
+		when(cal.logc(5)).thenReturn(55.0);
+		Double A=cal.logc(5);
+		Double E=55.0;
+		assertEquals(A, E);
 	}
 
 	/**
@@ -98,7 +123,11 @@ public class MockTests {
 	 */
 	@Test
 	public void testDisplay_PI() {
-		fail("Not yet implemented");
+		CalcApplication cal=mock(CalcApplication.class);
+		when(cal.display_PI()).thenReturn(3.54);
+		Double A=cal.display_PI();
+		Double E=3.54;
+		assertEquals(A, E);
 	}
 
 	/**
@@ -132,5 +161,5 @@ public class MockTests {
 	public void testGeoTan() {
 		fail("Not yet implemented");
 	}
-
+	
 }
