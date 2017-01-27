@@ -125,13 +125,13 @@ public class MockTests {
 	}
 
 	/**
-	 * Test method for {@link com.morningstar.calculators.CalcApplication#display_PI()}.
+	 * Test method for {@link com.morningstar.calculators.CalcApplication#displayPI()}.
 	 */
 	@Test
 	public void testDisplay_PI() {
 		CalcApplication cal=mock(CalcApplication.class);
-		when(cal.display_PI()).thenReturn(3.54);
-		Double A=cal.display_PI();
+		when(cal.displayPI()).thenReturn(3.54);
+		Double A=cal.displayPI();
 		Double E=3.54;
 		assertEquals(A, E);
 	}
@@ -168,13 +168,13 @@ public class MockTests {
 	}
 
 	/**
-	 * Test method for {@link com.morningstar.calculators.CalcApplication#GeoTan(double)}.
+	 * Test method for {@link com.morningstar.calculators.CalcApplication#geoTan(double)}.
 	 */
 	@Test
 	public void testGeoTan() {
 		CalcApplication ca=mock(CalcApplication.class);
-		when(ca.GeoTan(60)).thenReturn(0.3200403);
-		assertEquals(0.3200403,ca.GeoTan(60),0.00001);
+		when(ca.geoTan(60)).thenReturn(0.3200403);
+		assertEquals(0.3200403,ca.geoTan(60),0.00001);
 	}
 	
 }
