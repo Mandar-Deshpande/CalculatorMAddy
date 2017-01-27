@@ -3,12 +3,12 @@
  */
 package com.morningstar.Calculators;
 
+
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-import static org.mockito.Matchers.anyInt;
+import static org.mockito.Matchers.*;
 import org.junit.Test;
-import org.junit.runner.JUnitCore;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
 
@@ -34,7 +34,9 @@ public class MockTests {
 	 */
 	@Test
 	public void testAdd() {
-		fail("Not yet implemented");
+	CalcApplication ca=mock(CalcApplication.class);
+	when(ca.add(3, 4)).thenReturn(7.0);
+	assertEquals(7.0,ca.add(3, 4),0.000001);
 	}
 
 	/**
@@ -64,9 +66,11 @@ public class MockTests {
 	/**
 	 * Test method for {@link com.morningstar.calculators.CalcApplication#divide(double, double)}.
 	 */
-	@Test
+	@Test(expected=ArithmeticException.class)
 	public void testDivide() {
-		fail("Not yet implemented");
+		CalcApplication ca=mock(CalcApplication.class);
+		when(ca.divide(anyDouble(), eq(0.0))).thenThrow(new ArithmeticException());
+		ca.divide(1, 0);
 	}
 
 	/**
@@ -135,7 +139,9 @@ public class MockTests {
 	 */
 	@Test
 	public void testSin() {
-		fail("Not yet implemented");
+		CalcApplication ca=mock(CalcApplication.class);
+		when(ca.sin(30)).thenReturn( 0.49999999999999994);
+		assertEquals( 0.49999999999999994,ca.sin(30),0.000001);
 	}
 
 	/**
@@ -143,7 +149,10 @@ public class MockTests {
 	 */
 	@Test
 	public void testCos() {
-		fail("Not yet implemented");
+		CalcApplication ca=mock(CalcApplication.class);
+		when(ca.cos(30)).thenReturn( 0.8660254037844387);
+		
+		assertEquals(0.8660254037844387,ca.cos(30),0.000001);
 	}
 
 	/**
@@ -151,7 +160,9 @@ public class MockTests {
 	 */
 	@Test
 	public void testMod() {
-		fail("Not yet implemented");
+		CalcApplication ca=mock(CalcApplication.class);
+		when(ca.mod(15, 7)).thenReturn(1.0);
+		assertEquals(1.0,ca.mod(15,7 ),0.00001);
 	}
 
 	/**
@@ -159,7 +170,9 @@ public class MockTests {
 	 */
 	@Test
 	public void testGeoTan() {
-		fail("Not yet implemented");
+		CalcApplication ca=mock(CalcApplication.class);
+		when(ca.GeoTan(60)).thenReturn(0.3200403);
+		assertEquals(0.3200403,ca.GeoTan(60),0.00001);
 	}
 	
 }
