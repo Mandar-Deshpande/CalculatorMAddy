@@ -5,12 +5,26 @@ package com.morningstar.Calculators;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import static org.mockito.Mockito.when;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+import org.mockito.runners.MockitoJUnitRunner;
+
+import com.morningstar.calculators.CalcApplication;
+import com.morningstar.calculators.CalcInterface;
 
 /**
  * @author mdeshpa
  *
  */
+@RunWith(MockitoJUnitRunner.class)
 public class mockAnnote {
 
 	/**
@@ -18,15 +32,43 @@ public class mockAnnote {
 	 */
 	@Test
 	public void testCalcApplication() {
-		fail("Not yet implemented");
+		
 	}
 
 	/**
 	 * Test method for {@link com.morningstar.calculators.CalcApplication#add(double, double)}.
 	 */
+	
+	
+	@Mock
+	
+	CalcInterface ci=new CalcApplication();
+	
+	
+	
+	@PostConstruct
+	public void start(){
+		System.out.println("started");
+	}
+	
+	
+	@PreDestroy
+	public void end(){
+		System.out.println("ended");
+	}
+	/*@InjectMocks
+	
+	CalcApplication ca1=new CalcApplication();
+	*/
+	
+	
 	@Test
 	public void testAdd() {
-		fail("Not yet implemented");
+		Double d=10.0;
+		when(ci.add(12, 2)).thenReturn(12.0 - 2.0);
+		
+		assertEquals(d,ci.add(12, 2),0.00001);
+		
 	}
 
 	/**
@@ -34,7 +76,8 @@ public class mockAnnote {
 	 */
 	@Test
 	public void testSubtract() {
-		fail("Not yet implemented");
+		when(ci.subtract(12, 2)).thenReturn(10.0);
+		assertEquals(10.0,ci.subtract(12, 2),0.00001);
 	}
 
 	/**
