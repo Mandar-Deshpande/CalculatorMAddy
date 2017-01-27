@@ -8,7 +8,8 @@ import java.util.Scanner;
  */
 public class App {
 	static Scanner sc;
-	static double input1, input2;
+	static double input1;
+	static double input2;
 	static CalcApplication calc;
 	private App() {
 		input1 = 0.0;
@@ -18,10 +19,13 @@ public class App {
 	public static void main(String[] args) {
 		System.out.println("\t Welcome \n Calculator Program Using Maven");
 		boolean flag = true;
-		int a;
+		int a = 0;
 		sc = new Scanner(System.in);
 		calc = new CalcApplication();
 		while (flag) {
+			for (int clear = 0; clear < 100; clear++) {
+				System.out.println("\n");
+			}
 			try {
 				System.out.println("Choose Operation : \n 1.Addition \n 2.Subtraction \n 3.Multiplication \n 4.Division");
 				System.out.println(" 5.Exponential \n 6.Nth root \n 7.Quadratic Equations Root \n 8.Log  \n 9.Mod  \n 10.Tan  \n 11.Exit \n\n\n");
@@ -65,19 +69,18 @@ public class App {
 					System.out.println("\n Invalid Selection..Please select Valid option ");
 					break;
 				}
-
-				if (a != 8) {
-					System.out.println("\n Enter Y to Continue ");
-					String x = sc.next();
-					if(!"y".equalsIgnoreCase(x)) {
-						flag=false;
-					}
-					for (int clear = 0; clear < 1000; clear++) {
-						System.out.println("\n");
-					}
-				}
 			} catch (Exception ex) {
 				System.err.println(ex);
+			}
+			finally {
+				String x="n";
+				if (a != 8) {
+					System.out.println("\n Enter Y to Continue ");
+					 x = sc.next();
+				}
+				if(!"y".equalsIgnoreCase(x)) {
+					flag=false;
+				}
 			}
 		}
 	}

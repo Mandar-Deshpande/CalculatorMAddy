@@ -13,25 +13,25 @@ public class CalcApplication implements CalcInterface{
 
 	@Override
 	public Double add(double input1, double input2) {
-		return (input1 + input2);
+		return input1 + input2;
 	}
 	
 	@Override
 	public Double subtract(double input1, double input2) {
-		return (input1 - input2);
+		return input1 - input2;
 	}
 	
 	@Override	
 	public Double multiply(double input1, double input2) {
-		return (input1 * input2);
+		return input1 * input2;
 	}
 	
 	@Override
 	public Double divide(double input1, double input2) {
 			int temp=Double.compare(input2, 0.0);
 			if(temp!=0) {
-				double x = (input1 / input2);
-				return x;
+				return input1 / input2;
+				
 			}
 			else {
 				return Double.POSITIVE_INFINITY;
@@ -40,7 +40,7 @@ public class CalcApplication implements CalcInterface{
 
 	@Override
 	public Double expone(double input1) {
-		return (Math.round(Math.exp(input1) * 100.0) / 100.0);
+		return Math.round(Math.exp(input1) * 100.0) / 100.0;
 	}
 
 	@Override
@@ -111,7 +111,7 @@ public class CalcApplication implements CalcInterface{
 
 	@Override
 	public double mod(double input1, double input2) {
-		return (input1 % input2);
+		return input1 % input2;
 	}
 
 	@Override
