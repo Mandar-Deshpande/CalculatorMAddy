@@ -3,12 +3,15 @@
  */
 package com.morningstar.calculators;
 
+import org.apache.log4j.Logger;
 
 public class CalcApplication implements CalcInterface{
 	
 	private double tempd;
+	private static Logger log;
 	public CalcApplication() {
 		tempd=0.00;
+		log = Logger.getLogger(App.class.getName());
 	}
 
 	@Override
@@ -51,7 +54,7 @@ public class CalcApplication implements CalcInterface{
 	public double nthroot(double input1, double x, double p) {
 		int flag=Double.compare(x, tempd);
 		if (flag < 0) {
-			System.err.println("Negative!");
+			log.info("Negative!");
 			return -1;
 		}
 		if (flag==0)
@@ -79,7 +82,7 @@ public class CalcApplication implements CalcInterface{
 			roots[1] = (-b + Math.sqrt(d)) / (2 * a);
 			return roots;
 		} else {
-			System.out.println("Roots are imaginary");
+			log.info("Roots are imaginary");
 			return roots;
 		}
 	}
@@ -118,5 +121,4 @@ public class CalcApplication implements CalcInterface{
 	public double geoTan(double input1) {
 		return Math.tan(input1);
 	}
-
 }

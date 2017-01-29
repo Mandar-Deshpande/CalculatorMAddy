@@ -14,12 +14,12 @@ public class App {
 	private static double input2;
 	private static CalcApplication calc;
 	private static boolean flag;
+	private static Logger log;
 	private App() {
 		input1 = 0.0;
 		input2 = 0.0;
 	}
 
-static Logger log;
 	public static void main(String[] args) {
 		log.info("\t Welcome \n Calculator Program Using Maven");
 		flag = true;
