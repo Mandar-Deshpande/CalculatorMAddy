@@ -15,6 +15,7 @@ public class App {
 	private static CalcApplication calc;
 	private static boolean flag;
 	private static Logger log;
+
 	private App() {
 		input1 = 0.0;
 		input2 = 0.0;
@@ -31,48 +32,52 @@ public class App {
 			catcherror();
 		}
 	}
-	
-	private static void catcherror(){
+
+	private static void catcherror() {
 		int a = 0;
 		try {
 			log.info("Choose Operation : \n 1.Addition \n 2.Subtraction \n 3.Multiplication \n 4.Division");
-			log.info(" 5.Exponential \n 6.Nth root \n 7.Quadratic Equations Root \n 8.Log  \n 9.Mod  \n 10.Tan  \n 11.Exit \n\n\n");
+			log.info(
+					" 5.Exponential \n 6.Nth root \n 7.Quadratic Equations Root \n 8.Log  \n 9.Mod  \n 10.Tan  \n 11.Exit \n\n\n");
 			a = sc.nextInt();
-			choise(a);
+			if(a<=5 && a>0)
+				basicchoise(a);
+			else
+				choise(a);
 		} catch (Exception ex) {
 			log.error(ex);
-		}
-		finally {
-			String x="n";
+		} finally {
+			String x = "n";
 			if (a != 11) {
 				log.info("\n Enter Y to Continue ");
-				 x = sc.next();
+				x = sc.next();
 			}
-			if(!"y".equalsIgnoreCase(x)) {
-				flag=false;
+			if (!"y".equalsIgnoreCase(x)) {
+				flag = false;
 				log.info("\n Thank you for using calculator system ");
 			}
 		}
 	}
-	
-	private static void brline(){
+
+	private static void brline() {
 		for (int clear = 0; clear < 10; clear++) {
 			log.debug("\n");
 		}
 	}
-	
-	private static void inputdata(){
+
+	private static void inputdata() {
 		log.info("Enter Number 1 :");
 		input1 = sc.nextDouble();
 		log.info("Enter Number 2 :");
 		input2 = sc.nextDouble();
 	}
 
-	private static void inpdata(){
+	private static void inpdata() {
 		log.info("Enter Number :");
 		input1 = sc.nextDouble();
-		input2=0.0;
+		input2 = 0.0;
 	}
+
 	private static void add() {
 		log.info("Addition of Two Numbers");
 		inputdata();
@@ -118,13 +123,16 @@ public class App {
 		log.info("Enter vale for c :");
 		double input3 = sc.nextDouble();
 		double[] output = calc.qroot(input1, input2, input3);
-		log.info("Roots of " + input1 + "x \u00b2 +" + input2 + "x +" + input3 + " is {" + output[0] + "," + output[1] + "}");
+		log.info("Roots of " + input1 + "x \u00b2 +" + input2 + "x +" + input3 + " is {" + output[0] + "," + output[1]
+				+ "}");
 	}
+
 	private static void log() {
 		log.info("Log of Number");
 		inpdata();
 		log.info("Log of " + input1 + " = " + calc.logc(input1));
 	}
+
 	private static void mod() {
 		log.info("Mod of Two Numbers");
 		inpdata();
@@ -132,13 +140,15 @@ public class App {
 		input2 = sc.nextDouble();
 		log.info("Mod of " + input1 + " % " + input2 + " = " + calc.mod(input1, input2));
 	}
+
 	private static void tan() {
 		log.info("Tan of Number");
 		log.info("Enter degree in Radians :");
 		input1 = sc.nextDouble();
 		log.info("Tan(" + input1 + ") = " + calc.geoTan(input1));
 	}
-	private static void choise(int a){
+
+	private static void basicchoise(int a) {
 		switch (a) {
 		case 1:
 			add();
@@ -155,6 +165,11 @@ public class App {
 		case 5:
 			exp();
 			break;
+		}
+	}
+
+	private static void choise(int a) {
+		switch (a) {
 		case 6:
 			root();
 			break;
