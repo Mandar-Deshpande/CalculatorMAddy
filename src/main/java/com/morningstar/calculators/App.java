@@ -21,7 +21,7 @@ public class App {
 
 static Logger log;
 	public static void main(String[] args) {
-		System.out.println("\t Welcome \n Calculator Program Using Maven");
+		log.info("\t Welcome \n Calculator Program Using Maven");
 		flag = true;
 		sc = new Scanner(System.in);
 		log = Logger.getLogger(App.class.getName());
@@ -40,7 +40,7 @@ static Logger log;
 			a = sc.nextInt();
 			choise(a);
 		} catch (Exception ex) {
-			System.err.println(ex);
+			log.error(ex);
 		}
 		finally {
 			String x="n";
@@ -113,9 +113,9 @@ static Logger log;
 		log.info("Quadratic Root of Number");
 		log.info("Enter vale for a :");
 		input1 = sc.nextDouble();
-		System.out.println("Enter vale for b :");
+		log.info("Enter vale for b :");
 		input2 = sc.nextDouble();
-		System.out.println("Enter vale for c :");
+		log.info("Enter vale for c :");
 		double input3 = sc.nextDouble();
 		double[] output = calc.qroot(input1, input2, input3);
 		log.info("Roots of " + input1 + "x \u00b2 +" + input2 + "x +" + input3 + " is {" + output[0] + "," + output[1] + "}");
