@@ -10,7 +10,6 @@ import static org.mockito.Mockito.when;
 import static org.mockito.Matchers.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import com.morningstar.calculators.CalcApplication;
