@@ -40,7 +40,7 @@ public class App {
 			log.info(
 					" 5.Exponential \n 6.Nth root \n 7.Quadratic Equations Root \n 8.Log  \n 9.Mod  \n 10.Tan  \n 11.Exit \n\n\n");
 			a = sc.nextInt();
-			if(a<=5 && a>0)
+			if(a<=5)
 				basicchoise(a);
 			else
 				choise(a);
@@ -164,6 +164,9 @@ public class App {
 			break;
 		case 5:
 			exp();
+			break;
+		default:
+			log.info("\n Invalid Selection..Please select Valid option ");
 			break;
 		}
 	}
